@@ -1,0 +1,63 @@
+{
+  "invocation": "medication helper",
+  "intents": [
+    {
+      "name": "SetupIntent",
+      "phrases": ["setup"]
+    },
+    {
+      "name": "PermissionsIntent",
+      "phrases": ["permissions"]
+    }
+  ],
+  "alexa": {
+    "interactionModel": {
+      "languageModel": {
+        "intents": [
+          {
+            "name": "AMAZON.CancelIntent",
+            "samples": []
+          },
+          {
+            "name": "AMAZON.HelpIntent",
+            "samples": []
+          },
+          {
+            "name": "AMAZON.YesIntent",
+            "samples": []
+          },
+          {
+            "name": "AMAZON.NoIntent",
+            "samples": []
+          },
+          {
+            "name": "AMAZON.StopIntent",
+            "samples": []
+          },
+          {
+            "name": "NumberIntent",
+            "samples": ["{number}", "{number} pills", "{number} days"],
+            "slots": [
+              {
+                "name": "number",
+                "type": "AMAZON.NUMBER",
+                "samples": []
+              }
+            ]
+          },
+          {
+            "name": "TimeIntent",
+            "samples": ["at {time}", "{time}"],
+            "slots": [
+              {
+                "name": "time",
+                "type": "AMAZON.TIME",
+                "samples": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
